@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:bundle": "webpack-dev-server --mode development --port 5001 --config ./webpack.config.js",
-    "start:simple": "http-server -p 5000",
-    "start": "npm run start:bundle & npm run start:simple"
+    "start:simple": "http-server -p 5000"
   },
   "keywords": [],
   "author": "",
