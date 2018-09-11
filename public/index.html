@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clooney - No Bundle</title>
+</head>
+<body>
+  <script src="./clooney.bundle.min.js"></script>
+  <script>
+    (async function() {
+      class MyRemoteClass {
+        doExpensiveCalculation(a, b) {
+          return a + b;
+        }
+      }
+  
+      const instance = await Clooney.spawn(MyRemoteClass);
+      console.log(await instance.doExpensiveCalculation(5, 23));
+    })();
+  </script>
+</body>
+</html>
